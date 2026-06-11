@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>進金生能源服務簡介</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <strong>進金生能源服務簡介</strong>
+        <span>HTML editable deck</span>
+      </div>
+      <nav class="actions" aria-label="簡報操作">
+        <button id="prevSlide" type="button" title="上一頁">‹</button>
+        <span id="slideCounter">1 / 12</span>
+        <button id="nextSlide" type="button" title="下一頁">›</button>
+        <button id="editToggle" type="button" aria-pressed="false">編輯模式</button>
+        <button id="resetEdits" type="button">還原本頁</button>
+        <button id="downloadHtml" type="button">下載 HTML</button>
+      </nav>
+    </header>
+
+    <main class="workspace">
+      <aside id="thumbs" class="thumbs" aria-label="投影片縮圖"></aside>
+      <section class="stage" aria-live="polite">
+        <div id="slide" class="slide" role="group" aria-label="目前投影片"></div>
+      </section>
+    </main>
+
+    <footer class="statusbar">
+      <span id="statusText">瀏覽模式</span>
+      <span>內容會自動儲存在此瀏覽器</span>
+    </footer>
+
+    <script src="slides-data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

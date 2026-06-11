@@ -1,0 +1,281 @@
+:root {
+  color-scheme: light;
+  --ink: #18231f;
+  --muted: #68736f;
+  --line: #d9ded8;
+  --paper: #f5f7f4;
+  --panel: #ffffff;
+  --green: #006f53;
+  --gold: #c99a1e;
+  --blue: #315e86;
+  --danger: #b03232;
+  --shadow: 0 12px 36px rgba(30, 42, 36, 0.16);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  background: var(--paper);
+  font-family:
+    "Noto Sans TC",
+    "Microsoft JhengHei",
+    "PingFang TC",
+    system-ui,
+    sans-serif;
+}
+
+button {
+  height: 34px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0 12px;
+  color: var(--ink);
+  background: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:hover {
+  border-color: var(--green);
+}
+
+button[aria-pressed="true"] {
+  color: #fff;
+  border-color: var(--green);
+  background: var(--green);
+}
+
+.topbar,
+.statusbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.brand {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  min-width: 0;
+}
+
+.brand strong {
+  white-space: nowrap;
+}
+
+.brand span,
+.statusbar {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+#slideCounter {
+  min-width: 64px;
+  text-align: center;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: 176px minmax(0, 1fr);
+  gap: 18px;
+  height: calc(100vh - 98px);
+  padding: 18px;
+}
+
+.thumbs {
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-right: 4px;
+}
+
+.thumb {
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 8px;
+  background: var(--panel);
+  box-shadow: 0 4px 14px rgba(30, 42, 36, 0.08);
+  cursor: pointer;
+}
+
+.thumb.active {
+  border-color: var(--green);
+}
+
+.thumb-preview {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.thumb-title {
+  margin-top: 7px;
+  min-height: 30px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.25;
+}
+
+.stage {
+  overflow: auto;
+  display: grid;
+  place-items: center;
+  min-width: 0;
+  padding: 18px;
+}
+
+.slide {
+  position: relative;
+  overflow: hidden;
+  width: min(100%, 1280px);
+  aspect-ratio: 16 / 9;
+  background: #fff;
+  box-shadow: var(--shadow);
+  transform-origin: center center;
+}
+
+.deck-element {
+  position: absolute;
+  overflow: hidden;
+  transform-origin: center center;
+}
+
+.deck-element.text,
+.deck-element.shape {
+  padding: 4px 6px;
+  white-space: normal;
+  line-height: 1.18;
+}
+
+.deck-element.text .editable {
+  width: 100%;
+  height: 100%;
+  outline: none;
+}
+
+.deck-element.image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+  pointer-events: none;
+}
+
+body.editing .deck-element.text {
+  outline: 1px dashed rgba(0, 111, 83, 0.42);
+}
+
+body.editing .deck-element.selected {
+  outline: 2px solid var(--green);
+  overflow: visible;
+}
+
+.move-handle,
+.resize-handle {
+  display: none;
+  position: absolute;
+  z-index: 5;
+  background: var(--green);
+  border: 2px solid #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+body.editing .selected .move-handle,
+body.editing .selected .resize-handle {
+  display: block;
+}
+
+.move-handle {
+  top: -15px;
+  left: calc(50% - 14px);
+  width: 28px;
+  height: 10px;
+  border-radius: 5px;
+  cursor: move;
+}
+
+.resize-handle {
+  right: -8px;
+  bottom: -8px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  cursor: nwse-resize;
+}
+
+.statusbar {
+  border-top: 1px solid var(--line);
+  border-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .workspace {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .thumbs {
+    order: 2;
+    flex-direction: row;
+  }
+
+  .thumb {
+    min-width: 148px;
+  }
+
+  .brand {
+    flex-direction: column;
+    gap: 2px;
+  }
+}
+
+@media print {
+  .topbar,
+  .thumbs,
+  .statusbar {
+    display: none;
+  }
+
+  .workspace,
+  .stage {
+    display: block;
+    height: auto;
+    padding: 0;
+  }
+
+  .slide {
+    width: 100vw;
+    box-shadow: none;
+    page-break-after: always;
+  }
+}
