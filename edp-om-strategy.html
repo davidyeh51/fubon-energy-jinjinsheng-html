@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EDP O&M 維運策略儀表板</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="edp-om-strategy.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="回首頁">
+        <span class="brand-mark">EDP</span>
+        <span>
+          <strong>O&M 維運策略</strong>
+          <small>2026-2029 落地計畫</small>
+        </span>
+      </a>
+      <nav aria-label="頁面導覽">
+        <a href="#decision">策略判定</a>
+        <a href="#service">服務分層</a>
+        <a href="#finance">財務模型</a>
+        <a href="#validation">驗證節點</a>
+        <a href="edp-om-strategy-report-v6.md">完整報告</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">探索驅動計畫 v6.0</p>
+          <h1>進能服維運事業部四年落地策略</h1>
+          <p class="lead">
+            以 EDP 反推「成功的形狀」：先驗證財務結構、PR 保證能力與人力擴張可行性，再逐步放大 M / OM / AM 服務組合。
+          </p>
+        </div>
+        <div class="hero-visual" aria-label="四年策略路徑圖">
+          <div class="route-node active">
+            <span>2026</span>
+            <strong>基線校準</strong>
+            <small>毛利率、PR、平台商務</small>
+          </div>
+          <div class="route-line"></div>
+          <div class="route-node">
+            <span>2027</span>
+            <strong>試點轉合約</strong>
+            <small>AM 首件、淨利回測</small>
+          </div>
+          <div class="route-line"></div>
+          <div class="route-node">
+            <span>2028</span>
+            <strong>容量峰值</strong>
+            <small>690MW、28人組織</small>
+          </div>
+          <div class="route-line"></div>
+          <div class="route-node">
+            <span>2029</span>
+            <strong>正式達標</strong>
+            <small>累計淨利約 1.2 億</small>
+          </div>
+        </div>
+      </section>
+
+      <section id="decision" class="band decision-band">
+        <div class="section-heading">
+          <p class="eyebrow">核心判定</p>
+          <h2>四年期採用情境 B，原 2.4 億利潤改列 8 年願景</h2>
+          <p>
+            v6 將淨利率從 30% 修正為 15%。在 8 億收入規模下，四年累計淨利為約 1.2 億；若仍要求 2.4 億，需 16 億收入、約 1,280MW 與 51 人，超出四年期組織承受範圍。
+          </p>
+        </div>
+        <div class="metric-grid">
+          <article class="metric-card">
+            <span>四年收入</span>
+            <strong>8.0 億</strong>
+            <small>沿用 v5 容量模型</small>
+          </article>
+          <article class="metric-card accent">
+            <span>四年淨利</span>
+            <strong>1.2 億</strong>
+            <small>v6 正式中期目標</small>
+          </article>
+          <article class="metric-card">
+            <span>新 ROA</span>
+            <strong>21.4%</strong>
+            <small>1.2 億 / 5.6 億投資</small>
+          </article>
+          <article class="metric-card warn">
+            <span>最大假設</span>
+            <strong>F-1</strong>
+            <small>15% 淨利率是否成立</small>
+          </article>
+        </div>
+      </section>
+
+      <section class="band">
+        <div class="section-heading">
+          <p class="eyebrow">落地架構</p>
+          <h2>用三條管理線把策略變成營運節奏</h2>
+        </div>
+        <div class="strategy-map">
+          <article>
+            <span>01</span>
+            <h3>服務承諾</h3>
+            <p>M / OM / AM 是客戶看到的服務深度，費率與 PR 風險承擔同步提高。</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>成本活動</h3>
+            <p>維運服務、工程修繕、維運工程是內部毛利管理維度，三線需要逐月拆帳。</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>財務回測</h3>
+            <p>以毛利率 25%、SG&A 10%、淨利率 15% 做四年基準，再用實績修正。</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>驗證門</h3>
+            <p>不驗證假設就不跨里程碑；F-1、G-3、B-1 到 B-4 優先處理。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="service" class="band service-band">
+        <div class="section-heading">
+          <p class="eyebrow">服務分層</p>
+          <h2>費率、PR 目標與風險責任綁定</h2>
+        </div>
+        <div class="tier-grid" id="tierGrid"></div>
+        <div class="chart-panel wide">
+          <div class="panel-title">
+            <h3>Portfolio Mix 演變</h3>
+            <p>AM 佔比從 12% 提升到 30%，加權費率從 30 萬/MW 提升到 39 萬/MW。</p>
+          </div>
+          <div id="portfolioMix" class="stacked-chart"></div>
+        </div>
+      </section>
+
+      <section id="finance" class="band">
+        <div class="section-heading">
+          <p class="eyebrow">財務模型</p>
+          <h2>25% 毛利率與 15% 淨利率是第一優先驗證線</h2>
+        </div>
+        <div class="finance-grid">
+          <div class="chart-panel">
+            <div class="panel-title">
+              <h3>三業務線毛利貢獻</h3>
+              <p>加權後形成 25% 整體毛利率。</p>
+            </div>
+            <div id="marginMix" class="bar-visual"></div>
+          </div>
+          <div class="chart-panel">
+            <div class="panel-title">
+              <h3>利潤結構瀑布</h3>
+              <p>營收 100% 扣除 COGS 與 SG&A 後，淨利率為 15%。</p>
+            </div>
+            <div id="profitWaterfall" class="waterfall"></div>
+          </div>
+          <div class="chart-panel wide">
+            <div class="panel-title">
+              <h3>單年損益與累計淨利</h3>
+              <p>2029 年累計淨利約 1.197 億，對齊 1.2 億正式目標。</p>
+            </div>
+            <div id="annualProfit" class="table-chart"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="band capacity-band">
+        <div class="section-heading">
+          <p class="eyebrow">容量與人力</p>
+          <h2>2028 年是容量與組織壓力峰值</h2>
+        </div>
+        <div class="dual-chart">
+          <div class="chart-panel">
+            <div class="panel-title">
+              <h3>總管理容量</h3>
+              <p>330MW → 610MW → 690MW → 640MW。</p>
+            </div>
+            <div id="capacityBars" class="vertical-bars"></div>
+          </div>
+          <div class="chart-panel">
+            <div class="panel-title">
+              <h3>工程師需求</h3>
+              <p>以 25MW / 工程師推估，2028 年需 28 人。</p>
+            </div>
+            <div id="headcountBars" class="vertical-bars people"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="validation" class="band validation-band">
+        <div class="section-heading">
+          <p class="eyebrow">假設驗證</p>
+          <h2>先處理會讓整個計畫失準的假設</h2>
+        </div>
+        <div class="risk-grid" id="riskGrid"></div>
+        <div class="timeline" id="timeline"></div>
+      </section>
+
+      <section class="band action-band">
+        <div class="section-heading">
+          <p class="eyebrow">行動建議</p>
+          <h2>0 到 24 個月的管理重點</h2>
+        </div>
+        <div class="action-grid">
+          <article>
+            <h3>維運服務</h3>
+            <p>短期確認現有合約工時佔比；中期透過進能服平台自動化報告，將毛利率由 30% 推向 35%。</p>
+          </article>
+          <article>
+            <h3>工程修繕</h3>
+            <p>短期標準化故障排除 SOP；中期用零件集中採購與工時壓縮，將毛利率由 25% 推向 28%。</p>
+          </article>
+          <article>
+            <h3>維運工程</h3>
+            <p>短期執行 PT200 試點並量化清洗成本降幅；中期導入 AM / OM 場站，將毛利率由 15% 推向 22%。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="band source-band">
+        <div class="section-heading">
+          <p class="eyebrow">完整內容</p>
+          <h2>原始策略報告保留為 Markdown</h2>
+          <p>本頁為視覺化與決策導覽版本；細節表格、DDP Statement、附錄與完整推導可閱讀原始報告。</p>
+          <a class="primary-link" href="edp-om-strategy-report-v6.md">開啟完整報告</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>EDP O&M Strategy v6.0</span>
+      <span>Generated for GitHub Pages</span>
+    </footer>
+
+    <script src="edp-om-strategy.js"></script>
+  </body>
+</html>

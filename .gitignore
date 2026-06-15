@@ -3,3 +3,8 @@ Thumbs.db
 *.log
 .vscode/
 .playwright-cli/
+.playwright-daemon/
+.playwright-browsers/
+.localappdata/
+.npm-cache/
+output/playwright/
