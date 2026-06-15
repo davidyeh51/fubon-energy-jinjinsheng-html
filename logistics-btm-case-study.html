@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>大型電商物流中心 BTM 儲能業務案例</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="logistics-btm-case-study.css" />
+  </head>
+  <body class="btm-page">
+    <header class="btm-hero">
+      <nav class="btm-nav" aria-label="文件導覽">
+        <a href="index.html">回簡報</a>
+        <a href="#model">收益模型</a>
+        <a href="#risk">風險校正</a>
+        <a href="#talktrack">業務話術</a>
+      </nav>
+      <div class="btm-hero-copy">
+        <p class="btm-kicker">臺灣表後儲能 BTM Case Study</p>
+        <h1>大型電商物流中心儲能提案修正版</h1>
+        <p>
+          本案是契約容量 2,000 kW 的一般商業用戶，不是用電大戶義務戶。業務主軸應從合規回饋改成電費結構優化、夜尖峰削峰與可驗證的投報模型。
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <section class="btm-summary" aria-label="重點摘要">
+        <article><span>法規定位</span><strong>非義務戶</strong><p>未達 5,000 kW 門檻，不適用再生能源義務回饋與代金。</p></article>
+        <article><span>修正後年效益</span><strong>48.6 萬</strong><p>單套 125 kW / 261 kWh，以 TOU 套利加削峰節費估算。</p></article>
+        <article><span>回收年限</span><strong>5.7-6.5 年</strong><p>以 2026 市場 CAPEX 區間與 2% O&amp;M 估算。</p></article>
+        <article class="warning"><span>最大修正</span><strong>削峰功率</strong><p>125 kW 不能撐滿 4 小時夜尖峰，合理值約 58.7 kW。</p></article>
+      </section>
+
+      <section class="btm-section lead-section">
+        <div class="btm-heading"><p class="btm-kicker">Sales Positioning</p><h2>先把業務定位講正確</h2></div>
+        <div class="positioning-grid">
+          <article class="positioning-card primary"><h3>不能說</h3><p>本案不是用電大戶，不能把義務回饋、代金替代或法規履約當成主要賣點。</p></article>
+          <article class="positioning-card"><h3>應該說</h3><p>物流中心夜間負載高、尖峰電價貴，儲能價值來自「低價充、高價放」與可靠削峰。</p></article>
+          <article class="positioning-card"><h3>成交關鍵</h3><p>財務長看年節費與回收年限，廠務看 18:00-22:00 是否能穩定壓低台電端尖峰。</p></article>
+        </div>
+      </section>
+
+      <section class="btm-section" id="model">
+        <div class="btm-heading">
+          <p class="btm-kicker">Financial Model</p>
+          <h2>原始提案收益需下修 28%</h2>
+          <p>修正後仍是健康商業案，但必須把 VPP 移出基礎模型，並把削峰功率從 125 kW 校正為 58.7 kW。</p>
+        </div>
+        <div class="comparison-table">
+          <div class="comparison-row head"><span>收益項目</span><span>原始提案</span><span>修正後</span><span>業務解讀</span></div>
+          <div class="comparison-row"><span>TOU 時間電價套利</span><span>NT$332,665</span><span class="positive">NT$353,694</span><span>改用 114/10/1 費率後，夏月尖峰價差放大，收益反而提高。</span></div>
+          <div class="comparison-row"><span>降低契約容量</span><span>NT$299,175</span><span class="negative">NT$132,605</span><span>單套電量不足以支撐 4 小時 125 kW 削峰，必須改以 58.7 kW 估算。</span></div>
+          <div class="comparison-row"><span>VPP / 即時備轉</span><span>NT$43,750</span><span>Tier 2 待確認</span><span>和套利、削峰排程衝突，且小型機組參與門檻需由聚合商確認。</span></div>
+          <div class="comparison-row total"><span>年度收益合計</span><span>NT$675,590</span><span>NT$486,299</span><span>下修約 28%，但仍具備可銷售的商業投報。</span></div>
+        </div>
+      </section>
+
+      <section class="btm-section visual-section">
+        <div class="btm-heading"><p class="btm-kicker">Load Pattern</p><h2>真正的問題在 18:00-22:00 夜尖峰</h2><p>白天太陽能可以分攤用電，夜間無光伏支援時，台電端淨負載回到 2,000 kW 並持續 4 小時。</p></div>
+        <div class="load-chart" aria-label="24 小時淨負載示意">
+          <div class="load-bar" style="--height: 35%"><span>00-04</span><strong>700</strong></div>
+          <div class="load-bar" style="--height: 43%"><span>04-06</span><strong>850</strong></div>
+          <div class="load-bar" style="--height: 58%"><span>06-08</span><strong>1,150</strong></div>
+          <div class="load-bar" style="--height: 70%"><span>08-10</span><strong>1,400</strong></div>
+          <div class="load-bar" style="--height: 55%"><span>10-12</span><strong>1,100</strong></div>
+          <div class="load-bar low" style="--height: 28%"><span>12-14</span><strong>550</strong></div>
+          <div class="load-bar" style="--height: 60%"><span>14-16</span><strong>1,200</strong></div>
+          <div class="load-bar" style="--height: 83%"><span>16-18</span><strong>1,650</strong></div>
+          <div class="load-bar peak" style="--height: 100%"><span>18-22</span><strong>2,000</strong></div>
+          <div class="load-bar" style="--height: 60%"><span>22-24</span><strong>1,200</strong></div>
+        </div>
+      </section>
+
+      <section class="btm-section" id="risk">
+        <div class="btm-heading"><p class="btm-kicker">Risk Correction</p><h2>削峰模型的物理限制必須先講清楚</h2></div>
+        <div class="risk-layout">
+          <article class="risk-card danger"><h3>原提案風險</h3><p>若用 125 kW 申請調降契約容量，電池約 1.9 小時就會耗盡。只要月內任一 15 分鐘需量回到 2,000 kW，就可能觸發超約風險。</p></article>
+          <article class="risk-card formula"><h3>合理削峰功率</h3><p><strong>234.9 kWh ÷ 4 小時 = 58.7 kW</strong></p><p>單套 261 kWh、DoD 90% 後，可用電量約 234.9 kWh，因此 4 小時削峰能力不是 125 kW。</p></article>
+          <article class="risk-card"><h3>提案處理方式</h3><p>基礎方案只承認可持續的 58.7 kW 削峰。若客戶要更高降載，應改以 4 套並聯或逐時 SOC 模擬作為下一階段方案。</p></article>
+        </div>
+      </section>
+
+      <section class="btm-section scenario-section">
+        <div class="btm-heading"><p class="btm-kicker">Scale Scenario</p><h2>單套與 4 套並聯的銷售對照</h2></div>
+        <div class="scenario-grid">
+          <article><span>單套方案</span><h3>125 kW / 261 kWh</h3><dl><div><dt>可持續削峰</dt><dd>58.7 kW</dd></div><div><dt>年效益小計</dt><dd>NT$486,299</dd></div><div><dt>CAPEX 估價</dt><dd>NT$220-280 萬</dd></div><div><dt>適合情境</dt><dd>先導入、驗證節費與調度模型</dd></div></dl></article>
+          <article class="featured"><span>擴充方案</span><h3>4 套並聯 / 1,044 kWh</h3><dl><div><dt>可持續削峰</dt><dd>234.9 kW</dd></div><div><dt>年效益小計</dt><dd>NT$1,951,878</dd></div><div><dt>CAPEX 估價</dt><dd>NT$880-1,120 萬</dd></div><div><dt>適合情境</dt><dd>追求更明顯需量管理與工程效率</dd></div></dl></article>
+        </div>
+      </section>
+
+      <section class="btm-section checklist-section">
+        <div class="btm-heading"><p class="btm-kicker">Before Proposal</p><h2>簽約前必查 6 件事</h2></div>
+        <ol class="checklist">
+          <li>確認本案實際適用電費結構：高壓二段式或三段式。</li>
+          <li>確認台電超約罰款計算規則與本案適用費率。</li>
+          <li>用逐時負載與 SOC 模擬驗證 TOU 套利、削峰是否共用同一批放電。</li>
+          <li>確認即時備轉 / VPP 聚合商的最小容量門檻與收益計法。</li>
+          <li>取得設備 CAPEX 與 O&amp;M 正式報價。</li>
+          <li>確認調降契約容量的申請流程、頻率限制與實施時程。</li>
+        </ol>
+      </section>
+
+      <section class="btm-section talktrack-section" id="talktrack">
+        <div class="btm-heading"><p class="btm-kicker">Sales Talk Track</p><h2>三種對象的說法</h2></div>
+        <div class="talktrack-grid">
+          <article><h3>給財務長 / CFO</h3><p>這套系統主要靠電費結構優化賺錢，低價充電、夜尖峰放電。單套年效益約 48.6 萬元，回收約 5.7-6.5 年；若擴充到 4 套，數字等比放大。</p></article>
+          <article><h3>給廠務 / 設施主管</h3><p>貴廠最大的壓力是 18:00-22:00 夜尖峰。儲能可以協助壓低尖峰，但若要調降契約容量，必須確認電池可撐滿 4 小時，避免超約。</p></article>
+          <article><h3>回應 VPP 收入疑問</h3><p>VPP 要保留待命容量，但本案電池已用於套利與削峰。基礎方案先放最確定的收益，VPP 作為未來擴充規模後的加值選項。</p></article>
+        </div>
+      </section>
+
+      <section class="btm-close">
+        <h2>最終業務結論</h2>
+        <p>本案不是法規履約案，而是標準商業套利案。只要提案先修正削峰功率、移除未確認的 VPP 收入，仍可用「夜尖峰節費 + 可擴充投報」作為清楚且可辯護的銷售主軸。</p>
+        <small>資料基準：附件案例文件、台電 114/10/1 費率假設。實際效益需依現場負載、契約類別、超約規則與供應商報價確認。</small>
+      </section>
+    </main>
+  </body>
+</html>
