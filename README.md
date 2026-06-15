@@ -2,6 +2,13 @@
 
 這個專案將 `富邦能源_進金生能源簡介20260611.pptx` 轉成可用瀏覽器播放與編修的 HTML 簡報。
 
+## 高階摘要
+
+- `stp-strategy.html`：台灣再生能源市場 STP 策略的視覺化網頁版，針對進能服南區事業部業務開發落地使用。
+- `edp-om-strategy.html`：EDP O&M 維運策略 v6 的四年落地儀表板與圖像化網頁版。
+- `edp-om-strategy-report-v6.md`：EDP O&M 維運策略 v6 原始完整報告。
+- `logistics-btm-case-study.html`：大型電商物流中心 BTM 儲能業務案例，整理成業務可分享的網頁簡報。
+
 ## 使用方式
 
 1. 開啟 `index.html`。
