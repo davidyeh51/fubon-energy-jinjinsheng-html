@@ -50,6 +50,23 @@ button[aria-pressed="true"] {
   background: var(--green);
 }
 
+.link-button {
+  display: inline-flex;
+  align-items: center;
+  height: 34px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0 12px;
+  color: var(--ink);
+  background: #fff;
+  text-decoration: none;
+  font: inherit;
+}
+
+.link-button:hover {
+  border-color: var(--green);
+}
+
 .topbar,
 .statusbar {
   display: flex;
